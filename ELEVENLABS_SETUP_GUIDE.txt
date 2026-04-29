@@ -1,0 +1,199 @@
+ELEVENLABS INTEGRATION - SETUP GUIDE
+=====================================
+
+✅ FEATURE IMPLEMENTED: Hybrid Voice System (ElevenLabs + Windows TTS)
+
+## WHAT'S NEW:
+
+1. **Voice Engine Toggle**
+   - Switch between Windows TTS and ElevenLabs AI
+   - Located at the top of Voice Settings section
+   - Windows TTS: Free, offline, works immediately
+   - ElevenLabs AI: Premium quality, requires internet & API key
+
+2. **ElevenLabs Integration**
+   - Professional AI voice quality
+   - Natural Filipino pronunciation
+   - Perfect English pronunciation for brands/numbers
+   - Multilingual voices included
+
+3. **Automatic Fallback**
+   - If ElevenLabs fails (no internet, API error), automatically uses Windows TTS
+   - Seamless user experience
+
+---
+
+## HOW TO SET UP ELEVENLABS:
+
+### Step 1: Create Free ElevenLabs Account
+1. Go to: https://elevenlabs.io
+2. Click "Sign Up" (top right)
+3. Create account (email + password)
+4. Verify your email
+
+### Step 2: Get Your API Key
+1. Log in to ElevenLabs
+2. Click your profile icon (top right)
+3. Go to "Profile + API Key"
+4. Copy your API key (starts with "sk_...")
+
+### Step 3: Enter API Key in System
+1. Open PA Announcer System
+2. Go to "Voice Settings" section
+3. Click "ElevenLabs AI" button
+4. Paste your API key in the "API Key" field
+5. API key is saved automatically (stored in browser)
+
+### Step 4: Select Voice
+- Rachel (Female, Multilingual) - Recommended for Filipino
+- Bella (Female, Multilingual) - Softer tone
+- Domi (Female, Multilingual) - Clear pronunciation
+- Adam (Male, Multilingual) - Male voice option
+
+### Step 5: Test It
+1. Generate an announcement or load a saved one
+2. Click "Speak" button
+3. First time may take 2-3 seconds (generating audio)
+4. Subsequent uses are faster
+
+---
+
+## FREE TIER LIMITS:
+
+✅ 10,000 characters per month
+✅ Covers 40-50 parking announcements
+✅ Resets every month
+✅ No credit card required
+
+**Your Usage:**
+- Average announcement: ~200 characters
+- 50 announcements/month = 10,000 characters
+- ✅ Perfectly within free limit!
+
+---
+
+## AVAILABLE VOICES:
+
+**Rachel (EXAVITQu4vr4xnSDxMaL)**
+- Female, Multilingual
+- Natural Filipino accent
+- Clear and professional
+- ⭐ RECOMMENDED
+
+**Bella (21m00Tcm4TlvDq8ikWAM)**
+- Female, Multilingual
+- Softer, warmer tone
+- Good for friendly announcements
+
+**Domi (AZnzlk1XvdvUeBnXmlld)**
+- Female, Multilingual
+- Clear pronunciation
+- Balanced tone
+
+**Adam (pNInz6obpgDQGcFmaJgB)**
+- Male, Multilingual
+- Deep, authoritative voice
+- Alternative to female voices
+
+---
+
+## HOW IT WORKS:
+
+1. **User clicks "Speak"**
+2. **System checks selected engine:**
+   - If Windows TTS: Uses local voice (instant)
+   - If ElevenLabs: Sends text to API
+3. **ElevenLabs generates audio** (1-2 seconds)
+4. **Plays sequence:**
+   - Chime sound
+   - Announcement (AI voice)
+   - Reverse chime
+
+---
+
+## TROUBLESHOOTING:
+
+**"Please enter your ElevenLabs API key first"**
+→ You need to add your API key in the settings
+
+**"Error: Failed to generate speech"**
+→ Check internet connection
+→ Verify API key is correct
+→ Check if you exceeded free tier limit
+→ System will automatically fallback to Windows TTS
+
+**"No sound playing"**
+→ Check volume settings
+→ Ensure browser allows audio playback
+→ Try Windows TTS to verify audio works
+
+**"Slow generation"**
+→ First generation takes 2-3 seconds (normal)
+→ Check internet speed
+→ ElevenLabs servers may be busy
+
+---
+
+## COMPARISON:
+
+| Feature              | Windows TTS | ElevenLabs AI |
+|---------------------|-------------|---------------|
+| Cost                | Free        | Free (10k chars/mo) |
+| Quality             | Basic       | Professional |
+| Internet Required   | No          | Yes |
+| Filipino Accent     | Strong      | Natural |
+| English Pronunciation | Accented  | Perfect |
+| Setup               | None        | API Key needed |
+| Speed               | Instant     | 1-2 sec delay |
+
+---
+
+## BEST PRACTICES:
+
+1. **Use ElevenLabs for important announcements**
+   - Better clarity
+   - More professional sound
+   - Easier to understand
+
+2. **Use Windows TTS as backup**
+   - When internet is down
+   - For testing/practice
+   - When quota is exceeded
+
+3. **Monitor your usage**
+   - ~200 chars per announcement
+   - 50 announcements = 10,000 chars
+   - Check usage at elevenlabs.io dashboard
+
+4. **Keep API key secure**
+   - Don't share your API key
+   - Stored locally in browser
+   - Each computer needs its own key
+
+---
+
+## SECURITY NOTES:
+
+- API key is stored in browser's localStorage
+- Only accessible from your computer
+- Not sent to any server except ElevenLabs
+- Can be cleared by clearing browser data
+- Each user/computer needs their own API key
+
+---
+
+## SUPPORT:
+
+**ElevenLabs Issues:**
+- Visit: https://help.elevenlabs.io
+- Email: support@elevenlabs.io
+
+**System Issues:**
+- Check browser console for errors (F12)
+- Verify internet connection
+- Try Windows TTS fallback
+- Clear browser cache and reload
+
+---
+
+ENJOY YOUR PROFESSIONAL PARKING ANNOUNCEMENT SYSTEM! 🎉

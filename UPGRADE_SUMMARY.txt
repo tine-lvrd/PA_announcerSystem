@@ -1,0 +1,91 @@
+PA ANNOUNCER SYSTEM - UPGRADE SUMMARY
+=====================================
+
+✅ COMPLETED FEATURES:
+
+1. MODE INDICATOR SYSTEM
+   - Visual badge showing current mode (Ready/Parking Mode/Custom Mode)
+   - Auto-switches to "Parking Mode" when generating vehicle announcements
+   - Auto-switches to "Custom Mode" when loading saved announcements
+   - Color-coded: Gray (Ready), Green (Parking), Yellow (Custom)
+
+2. TWO-LEVEL VEHICLE SELECTION
+   - First dropdown: Vehicle Type (Car, SUV/Van, Motorcycle, Tricycle, Truck)
+   - Second dropdown: Brand/Model (dynamically populated based on type)
+   - Brand dropdown disabled until vehicle type is selected
+
+3. PHILIPPINE VEHICLE DATABASE
+   - 80+ popular vehicle brands/models in the Philippines
+   - Organized by category:
+     * Cars: Toyota, Honda, Mitsubishi, Nissan, Hyundai, Suzuki, Ford, Mazda, Isuzu, Kia, Chevrolet
+     * SUVs/Vans: Fortuner, Alphard, Montero Sport, Everest, Terra, etc.
+     * Motorcycles: Honda Click/Beat/TMX, Yamaha Mio/NMAX, Suzuki, Kawasaki
+     * Tricycles: Honda TMX-based, Yamaha-based, Rusi-based, Standard
+     * Trucks: Isuzu Elf/Forward, Mitsubishi Fuso/Canter, Hino, Foton, JAC
+
+4. ADAPTIVE LEARNING SYSTEM
+   - When user enters custom brand via "Other" option, it's automatically saved
+   - Custom brands appear at top of dropdown under "★ Your Custom Vehicles"
+   - Stores up to 10 custom brands per vehicle type
+   - Persists across browser sessions (localStorage)
+   - Validation: Minimum 3 characters required
+   - Prevents duplicate entries (case-insensitive)
+
+5. CUSTOM BRANDS MANAGER (NEW!)
+   - Dedicated section to view all saved custom brands
+   - Organized by vehicle type (Cars, Motorcycles, etc.)
+   - Delete individual custom brands (fix typos)
+   - "Clear all custom brands" button
+   - Auto-updates dropdown when brands are deleted
+
+6. FILIPINO VOICE FILTER (NEW!)
+   - Shows ONLY Filipino/Tagalog voices (Blessica, etc.)
+   - Filters out all other language voices for cleaner interface
+   - Fallback: If no Filipino voices installed, shows all voices with warning
+   - Perfect for Philippine parking announcement system
+
+7. ENHANCED COLOR OPTIONS
+   - Added more common colors: Silver, Gray, Green, Yellow, Orange, Brown
+   - Still supports custom colors via "Other" option
+
+8. PLATE NUMBER AUTO-FORMATTING
+   - Automatically converts to uppercase
+   - Removes invalid characters
+   - Maintains proper spacing
+
+BACKWARD COMPATIBILITY:
+✅ All existing saved announcements still work
+✅ Voice settings unchanged
+✅ Audio chimes unchanged
+✅ Custom text input still works
+✅ All original functionality preserved
+
+TECHNICAL DETAILS:
+- Zero breaking changes
+- Uses localStorage for custom brands (same as saved announcements)
+- Clean, organized code structure
+- No external dependencies added
+- Smart validation prevents typos and duplicates
+
+HOW TO USE:
+1. Select vehicle type → Brand dropdown activates
+2. Choose brand or enter custom → System remembers custom entries
+3. Generate announcement → Mode switches to "Parking Mode"
+4. Load saved announcement → Mode switches to "Custom Mode"
+5. Mode indicator always shows current state
+6. Manage custom brands in dedicated section (delete typos, clear all)
+
+VOICE SELECTION:
+- Only Filipino/Tagalog voices shown (Blessica, etc.)
+- Clean interface without unnecessary language options
+- If no Filipino voices: Shows warning + all voices as fallback
+
+STORAGE KEYS:
+- pa_announcements: Saved announcements (existing)
+- pa_custom_brands: Custom vehicle brands (new)
+
+NETWORK ACCESS:
+- Can be hosted on local network using simple HTTP server
+- Each computer uses its own TTS voices
+- Each computer stores its own saved data (localStorage)
+- Perfect for office/parking lot deployment
