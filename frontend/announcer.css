@@ -1,0 +1,612 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f3;
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+/* ─── App Shell ─────────────────────────────── */
+.pa-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Topbar ─────────────────────────────────── */
+.pa-topbar {
+  background: #ffffff;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.pa-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pa-brand-icon {
+  width: 32px;
+  height: 32px;
+  background: #e6f1fb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pa-brand-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pa-brand-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.pa-brand-sub {
+  font-size: 11px;
+  color: #999;
+  font-weight: 400;
+}
+
+.pa-clock {
+  text-align: right;
+}
+
+.pa-time {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  display: block;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.pa-date {
+  font-size: 11px;
+  color: #999;
+  display: block;
+}
+
+/* ─── Grid ───────────────────────────────────── */
+.pa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 20px 24px 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Cards ──────────────────────────────────── */
+.pa-card {
+  background: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pa-card-full {
+  grid-column: span 3;
+}
+
+.pa-card-title {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  margin-bottom: 2px;
+}
+
+/* ─── Form Fields ────────────────────────────── */
+.pa-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pa-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+
+.pa-select,
+.pa-input,
+.pa-textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fafafa;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 9px 12px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.pa-select:hover,
+.pa-input:hover,
+.pa-textarea:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.pa-select:focus,
+.pa-input:focus,
+.pa-textarea:focus {
+  border-color: #185FA5;
+  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.08);
+  background: #ffffff;
+}
+
+.pa-textarea {
+  height: 80px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ─── Select Wrapper ──────────────────────────── */
+.pa-select-wrap {
+  position: relative;
+}
+
+.pa-select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #999;
+  pointer-events: none;
+}
+
+/* ─── Preview ────────────────────────────────── */
+.pa-preview-label {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 5px;
+}
+
+.pa-preview {
+  background: #e6f1fb;
+  border: 0.5px solid #b5d4f4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #0c447c;
+  line-height: 1.65;
+  min-height: 48px;
+  font-style: italic;
+}
+
+/* ─── Buttons ────────────────────────────────── */
+.pa-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s, background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.pa-btn:active {
+  transform: scale(0.98);
+}
+
+.pa-btn-primary {
+  background: #185FA5;
+  color: #ffffff;
+  border-color: #185FA5;
+}
+
+.pa-btn-primary:hover {
+  background: #1354918f;
+  opacity: 0.9;
+}
+
+.pa-btn-secondary {
+  background: #f5f5f3;
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.pa-btn-secondary:hover {
+  background: #ebebea;
+}
+
+.pa-btn-danger {
+  background: #A32D2D;
+  color: #ffffff;
+  border-color: #A32D2D;
+}
+
+.pa-btn-danger:hover {
+  opacity: 0.88;
+}
+
+/* ─── Voice Row ──────────────────────────────── */
+.pa-voice-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.pa-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-bottom: 1px;
+}
+
+/* ─── Sliders ────────────────────────────────── */
+.pa-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.07);
+}
+
+.pa-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pa-slider-label {
+  font-size: 12px;
+  color: #666;
+  min-width: 38px;
+}
+
+.pa-range {
+  flex: 1;
+  height: 4px;
+  cursor: pointer;
+  accent-color: #185FA5;
+}
+
+.pa-slider-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  min-width: 32px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Utilities ──────────────────────────────── */
+::placeholder {
+  color: #bbb;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ─── Voice Engine Toggle ────────────────────── */
+.pa-voice-engine-toggle {
+  display: flex;
+  gap: 8px;
+  background: #f5f5f3;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.pa-engine-btn {
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pa-engine-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+}
+
+.pa-engine-btn.active {
+  background: #ffffff;
+  color: #185FA5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pa-hint {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+  display: block;
+}
+
+.pa-hint a {
+  color: #185FA5;
+  text-decoration: none;
+}
+
+.pa-hint a:hover {
+  text-decoration: underline;
+}
+
+.pa-usage-info {
+  padding: 12px;
+  background: #e6f1fb;
+  border-radius: 8px;
+  margin-top: 12px;
+  border: 1px solid #b5d4f4;
+}
+
+.pa-usage-info.usage-warning {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.pa-usage-info.usage-critical {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.usage-status {
+  font-weight: 500;
+}
+
+.usage-bar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.usage-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.usage-warning .usage-bar-fill {
+  background: linear-gradient(90deg, #FFC107, #FFD54F);
+}
+
+.usage-critical .usage-bar-fill {
+  background: linear-gradient(90deg, #F44336, #E57373);
+}
+
+.usage-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usage-remaining {
+  color: #666;
+}
+
+.pa-usage-info small {
+  font-size: 11px;
+  color: #0c447c;
+}
+
+.pa-usage-info.usage-warning small {
+  color: #856404;
+}
+
+.pa-usage-info.usage-critical small {
+  color: #721c24;
+}
+
+
+/* ─── Mode Indicator ─────────────────────────── */
+.pa-mode-indicator {
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+}
+
+.pa-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.pa-mode-badge.mode-ready {
+  background: #f0f0f0;
+  color: #999;
+}
+
+.pa-mode-badge.mode-parking {
+  background: #d4edda;
+  color: #155724;
+}
+
+.pa-mode-badge.mode-custom {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.pa-mode-badge svg {
+  flex-shrink: 0;
+}
+
+/* ─── Custom Brands Manager ──────────────────── */
+.pa-custom-brand-section {
+  margin-bottom: 16px;
+}
+
+.pa-custom-brand-section:last-child {
+  margin-bottom: 0;
+}
+
+.pa-custom-brand-header {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.pa-custom-brand-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pa-custom-brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #fafafa;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.pa-custom-brand-name {
+  font-size: 13px;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+
+
+/* ─── Saved Announcements ────────────────── */
+.pa-saved-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pa-saved-composer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.pa-btn-save {
+  flex-shrink: 0;
+  align-self: flex-end;
+  padding: 9px 18px;
+  margin-bottom: 1px;
+}
+
+.pa-saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pa-saved-empty {
+  font-size: 13px;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pa-saved-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fafafa;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.pa-saved-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.pa-saved-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.pa-saved-text {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pa-saved-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.pa-btn-sm {
+  font-size: 12px;
+  padding: 6px 12px;
+}
